@@ -63,6 +63,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         rollAll()
     }
     
+    @IBAction func removeAllDice(_ sender: UIBarButtonItem) {
+        for dice in diceArray {
+            dice.removeFromParentNode()
+        }
+    }
+    
     // MARK: - ARSCNViewDelegate
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
